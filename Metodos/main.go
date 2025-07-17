@@ -50,8 +50,29 @@ func main() {
 			3: "maps",
 		},
 	}
+	Ir := &Course{ //Se instancia la Ir tipo puntero de curso
+		Name:   "Go desde Cero",
+		Price:  12.34,
+		IsFree: false,
+		UserID: []uint{12, 56, 89},
+		Classes: map[uint]string{
+			1: "introduccion",
+			2: "estructuras",
+			3: "maps",
+		},
+	}
 
 	//PrintClasses(Go)
 	Go.ImprimirClase()
 	Go.Classesimpresas()
+	(&Go).ChangePrice(67.12) //se usa el operador de direccion para poder enviar como tal la direccion de la estructura y no solo enviar una copia de los datos
+	(*Ir).ImprimirClase()
+
+	//Si se quiere trabajar con la estructura se utiliza un receptor de tipo puntero, yu si se quiere nada mas con trabajar con los datos sin cambiarlos
+	//se utilizan receptores normales
+	//Como tip cuando se trbajan con interfaces es de que si algun metodo es de tipo puntero configurar todos los metodos de la estructura como tipo puntero
+	//aunque no se necesite actualizar un valor, esto debido a que las interfaces diferencian entre si un metodo es puntero o no
+
+	fmt.Println(Go.Price)
+
 }

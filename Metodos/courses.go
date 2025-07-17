@@ -18,3 +18,9 @@ func (c Course) Classesimpresas() { // el metodo tiene un argumento receptor lla
 	}
 	fmt.Println(text[:len(text)-2])
 }
+
+func (c *Course) ChangePrice(price float64) { // se usa el operador de puntero para senalar que se esta apuntando hacia una direccion y no solo se esta haciendo uso del dato
+	c.Price = price
+}
+
+//1.5
