@@ -15,11 +15,23 @@ Encapsulamiento:  Caracteristica que proove un lenguaje para protejer las propie
                     La encapsulacion permite encapsular la complejidad de un proceso
 
 Herencia:       es la capacidad de transmitir caracteristicas(propiedades y metodos) de una clase a otra, por medio del sistema de herencia en 
-                otros lenguajes como c++/java
+Composicion     otros lenguajes como c++/java
                 En GO no se cuenta con esta caracteristica como tal, se tiene un sistema de tipos con de se plasman caracteristicas y metodos que permiten trabajar de manera similar, este sistema permite usar tipos que pertenescan a otros tipos de manera analoga pero distinta
                 ademas de que existen el concepto de interfaces
 
+                desde el diseno del lenguaje se diseno para que no existiera la herencia, esto para evitar la gerarquia de tipos y un sobrediseno temprano del programa 
+
+                Como alternativa se genero el concepto de composicion, a diferencia de la herencia donde la relacion es de uno a uno, es decir una clase hereda solo de uno, mientras que en la composicion es relaciones 1 a muchos, no hay gerarquia de tipos, si no mas bien principios de responsabilidad, ademas de que se pueden agragar dependencias
+
+                la composicion permite la realizacion de test unitarios de manera sensilla, al generar metodos que testien sola mente la interfas que se busquen.
+
+                otra ventaja es de que se pueden tener metodos en diferentes tipos declarados ademas de estructuras, ademas de que se pueden tener interfaces implicitas, esto permite que un tipo pueda satisfacer diferentes interfaces
+
+                Go permite inscruptar tipos dentro de otros tipos similar a las subclases
+
+
+
 Polimorfismo:       La caracteristica del lenguaje de mandar para mandar mensajes sintacticamente iguales y que objetos de distintos tipos puedan 
                 reaccionar al mensaje, a diferencia de otros lenguajes esto se realiza en GO a travez del uso de interfaces
-                
+
 
