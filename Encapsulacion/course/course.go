@@ -4,11 +4,11 @@ import "fmt"
 
 //un identificador exportado sera aquel en el que a nivel de paquete empiecen con letra mayuscula
 type course struct {
-	Name    string
-	Price   float64
-	IsFree  bool
-	UserID  []uint
-	Classes map[uint]string
+	name    string
+	price   float64
+	isFree  bool
+	userID  []uint
+	classes map[uint]string
 }
 
 //funcion constructora
@@ -21,26 +21,47 @@ func New(name string, price float64, isFree bool) *course {
 	}
 
 	return &course{
-		Name:   name,
-		Price:  price,
-		IsFree: isFree,
+		name:   name,
+		price:  price,
+		isFree: isFree,
 	}
 
 }
 
 //metodo no exportado
 func (c *course) changePrice(price float64) { // se usa el operador de puntero para senalar que se esta apuntando hacia una direccion y no solo se esta haciendo uso del dato
-	c.Price = price
+	c.price = price
 }
 
 //metodo exportado
 func (c *course) PrintClasses() { // el metodo tiene un argumento receptor llamado c de estructura course, el metodo pertenece a la estructura
 	text := "las clases son: "
-	for _, class := range c.Classes {
+	for _, class := range c.classes {
 		text += class + ", "
 
 	}
 	fmt.Println(text[:len(text)-2])
 }
 
-//Minute 6
+//Setters and Getters
+func (c *course) SetName(name string) { c.name = name }
+func (c *course) Name() string {
+	return c.name
+}
+
+func (c *course) SetPrice(price float64) { c.price = price }
+func (c *course) Price() float64 {
+	return c.price
+}
+
+func (c *course) SetIsFree(isFree bool) { c.isFree = isFree }
+func (c *course) IsFree() bool {
+	return c.isFree
+}
+func (c *course) SetUserID(userID []uint) { c.userID = userID }
+func (c *course) UserID() []uint {
+	return c.userID
+}
+func (c *course) SetClasses(classes map[uint]string) {
+	c.classes = classes
+}
