@@ -29,9 +29,9 @@ func New(name string, price float64, isFree bool) *course {
 }
 
 //metodo no exportado
-func (c *course) changePrice(price float64) { // se usa el operador de puntero para senalar que se esta apuntando hacia una direccion y no solo se esta haciendo uso del dato
+/*func (c *course) changePrice(price float64) { // se usa el operador de puntero para senalar que se esta apuntando hacia una direccion y no solo se esta haciendo uso del dato
 	c.price = price
-}
+}*/
 
 //metodo exportado
 func (c *course) PrintClasses() { // el metodo tiene un argumento receptor llamado c de estructura course, el metodo pertenece a la estructura
