@@ -54,7 +54,6 @@ func main() {
 	fmt.Printf("El tipo es: %T\n", e)
 
 	var b newBool = true
-
 	fmt.Print("b es ", b.String())
 
 }
