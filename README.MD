@@ -34,6 +34,8 @@ Composicion     otros lenguajes como c++/java
 Polimorfismo:       La caracteristica del lenguaje de mandar para mandar mensajes sintacticamente iguales y que objetos de distintos tipos puedan 
                 reaccionar al mensaje, a diferencia de otros lenguajes esto se realiza en GO a travez del uso de interfaces
 
+                Una interface es un conjunto de firma de metodos, y en go se fomenta el uso de interfaces simples a menudo de un solo metodo, el cual sirve como limite limpio y comprensible entre los componentes, debido a que se promueve el uso de interfaces de un solo metodo, las buenas practicas son que el nombre de la interface sera el nombre del metodo con el sufijo er, ejemplo de interfaces standard se ecuentar wirter, reader stringer, que tienen el sufijo er para representar que son interfaces
+
 
 Tipos Declarados:   Son nuevos tipos creados por el programador los cuales son creados a base de tipos existentes, con la condicion de que estos tipos,
                     sus metodos, deben de estar declarados en el paquete donde se han sido declarados, razon por la cual no es posible agregar metodos a los tipos predeclarados como bool, string, byte, ya que no se han declarado en nuestro paquete, sin embargo se puede crear un nuevo tipo con base en un tipo predeclarado y que agregar los metodos que los tengamos
