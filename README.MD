@@ -35,3 +35,9 @@ Polimorfismo:       La caracteristica del lenguaje de mandar para mandar mensaje
                 reaccionar al mensaje, a diferencia de otros lenguajes esto se realiza en GO a travez del uso de interfaces
 
 
+Tipos Declarados:   Son nuevos tipos creados por el programador los cuales son creados a base de tipos existentes, con la condicion de que estos tipos,
+                    sus metodos, deben de estar declarados en el paquete donde se han sido declarados, razon por la cual no es posible agregar metodos a los tipos predeclarados como bool, string, byte, ya que no se han declarado en nuestro paquete, sin embargo se puede crear un nuevo tipo con base en un tipo predeclarado y que agregar los metodos que los tengamos
+
+                   
+
+
