@@ -22,9 +22,9 @@ import (
 	"strings"
 )
 
-type exampler interface {
+/*type exampler interface {
 	X()
-}
+}*/
 
 func wrapper(i interface{}) {
 	fmt.Printf("valor: %v, Tipe:%T \n", i, i)
