@@ -8,15 +8,27 @@ package main
 //Es aquella interface que no tiene ningun metodo para el caso empty, Usalmente es util para manejar valores de tipos desconocidos
 // es decir cuando no sabemos el tipo existente
 //Cualquier tipo existente dentro del paquete implementara la empty interface
-import "fmt"
+
+// Las assertions o aserciones permiten validar el tipo concreto que tiene la interfas vacia,
+// para ingresar las inserciones se escribe el objeto de interface i seguido de un punto i. seguido del tipo que se quiere validar entre parentesis
+//i.(string) o i.(uint), las inserciones retornan el valor de la interface ademas de un bool valor, validacion := i.(uint)
+import (
+	"fmt"
+	"strings"
+)
 
 type exampler interface {
 	X()
 }
 
 func wrapper(i interface{}) {
-	fmt.Printf("valor: %v, Tipe:%T", i, i)
+	fmt.Printf("valor: %v, Tipe:%T \n", i, i)
 
+	v, ok := i.(string) //Se genera una insercion para validar si tipo string
+
+	if ok {
+		fmt.Printf("\t %s\n", strings.ToUpper(v))
+	}
 }
 
 func main() {
@@ -25,6 +37,8 @@ func main() {
 
 	wrapper(12)
 	wrapper(1.2)
+	wrapper("ricardo")
 	wrapper(false)
-	wrapper("fieiha")
+	wrapper("jaime")
+
 }
