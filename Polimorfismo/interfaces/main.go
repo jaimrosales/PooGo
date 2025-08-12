@@ -1,5 +1,7 @@
 package main
 
+//Es un conjunto de firma de metodos
+
 import "fmt"
 
 //para crear una interface se hace con la palabra type seguida del nombre del metodo a usar dentro de la interface+er y despues la palabra interface{}
